@@ -36,14 +36,12 @@
     </dependencies>
    
 <build>
-<build>
     <resources>
         <resource>
             <directory>java</directory>
         </resource>
     </resources>
-</build>
-    <plugins>
+	<plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
