@@ -54,8 +54,8 @@ public class QuadTreeUtil {
         int minC = RC[2];
         int maxC = RC[3];
         System.out.println(minR + " " + maxR + " " + minC + " " + maxC);
-        for (int x = minR; x < maxR; ++x) {
-            for (int y = minC; y < maxC; ++y) {
+        for (int x = minR; x <= maxR; ++x) {
+            for (int y = minC; y <= maxC; ++y) {
                 xyz[0] = x;
                 xyz[1] = y;
 
