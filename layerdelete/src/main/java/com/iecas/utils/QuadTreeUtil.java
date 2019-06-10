@@ -58,8 +58,9 @@ public class QuadTreeUtil {
             for (int y = minC; y < maxC; ++y) {
                 xyz[0] = x;
                 xyz[1] = y;
+
                 Result result = HbaseUtils.getResult("hbase_tile_table", layerName + '_' +xyz2QuadTreeCode(xyz));
-                log.info(layerName + '_' +xyz2QuadTreeCode(xyz));
+                System.out.println((layerName + '_' +xyz2QuadTreeCode(xyz)));
                 System.out.println(result.size());
             }
         }

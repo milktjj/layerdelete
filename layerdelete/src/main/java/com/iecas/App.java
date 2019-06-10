@@ -37,7 +37,7 @@ public class App {
             //XMLP.getLayerNames(document);
             int start = Integer.valueOf(args[args.length-2]);
             int end = Integer.valueOf(args[args.length-1]);
-            for (int z = start; start < end; ++z) {
+            for (int z = start; z < end; ++z) {
                 QuadTreeUtil.xyz2QuadTreeCodes(XMLP.getLayerInfo(document, "EPSG:4326", layerName, z), z,layerName);
             }
         }
