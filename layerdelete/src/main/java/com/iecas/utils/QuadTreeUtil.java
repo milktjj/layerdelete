@@ -1,12 +1,16 @@
 package com.iecas.utils;
 
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.client.Result;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class QuadTreeUtil {
+    private static final Log log = LogFactory.getLog(QuadTreeUtil.class);
+
     public QuadTreeUtil() {
     }
 
@@ -55,6 +59,7 @@ public class QuadTreeUtil {
                 xyz[0] = x;
                 xyz[1] = y;
                 Result result = HbaseUtils.getResult("hbase_tile_table", layerName + '_' +xyz2QuadTreeCode(xyz));
+                log.info(layerName + '_' +xyz2QuadTreeCode(xyz));
                 System.out.println(result.size());
             }
         }

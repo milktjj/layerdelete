@@ -34,7 +34,7 @@ public class App {
                 url = args[3];
             String layerName = args[1];
             Document document = XMLP.parse(new URL(url));
-            XMLP.getLayerNames(document);
+            //XMLP.getLayerNames(document);
             int start = Integer.valueOf(args[args.length-2]);
             int end = Integer.valueOf(args[args.length-1]);
             for (int z = start; start < end; ++z) {
