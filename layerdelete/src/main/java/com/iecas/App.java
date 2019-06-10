@@ -16,19 +16,18 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        String url = "file:///C:\\Users\\MILK\\Desktop\\wmts.xml";
+
         if(args.length == 0) {
             System.out.println("Usage:\t--getLayers [-f xml_url]\n\t--deleteLayer layername [-f xml_url] start end");
-        }
-        String url = "file:///C:\\Users\\MILK\\Desktop\\wmts.xml";
-        if (args[0].equals("--getLayers")) {
+        }else if (args[0].equals("--getLayers")) {
             if (args.length == 3) {
                 if (args[1].equals("-f"))
                     url = args[2];
             }
             Document document = XMLP.parse(new URL(url));
             XMLP.getLayerNames(document);
-        }
-        if (args[0].equals("--deleteLayer")) {
+        }else if (args[0].equals("--deleteLayer")) {
             if (args[2].equals("-f"))
                 url = args[3];
             String layerName = args[1];
