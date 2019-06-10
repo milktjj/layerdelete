@@ -25,7 +25,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="12" />
+          <entry key="class" value="13" />
           <entry key="conf" value="1" />
           <entry key="java" value="12" />
           <entry key="properties" value="1" />
@@ -34,7 +34,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="12" />
+          <entry key="CLASS" value="13" />
           <entry key="JAVA" value="12" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
@@ -43,14 +43,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1957" />
+          <entry key="java" value="1972" />
           <entry key="txt" value="14" />
           <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1957" />
+          <entry key="JAVA" value="1972" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="15" />
         </counts>
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="64" column="100" selection-start-line="64" selection-start-column="100" selection-end-line="64" selection-end-column="100" />
+            <state relative-caret-position="208">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="118">
+              <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="177">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,7 +127,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-27" />
     <option name="y" value="147" />
     <option name="width" value="1378" />
@@ -293,7 +293,7 @@
       <workItem from="1559638831142" duration="1689000" />
       <workItem from="1559698678745" duration="5984000" />
       <workItem from="1559801324895" duration="950000" />
-      <workItem from="1560127382238" duration="13178000" />
+      <workItem from="1560127382238" duration="13685000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1559639956355</created>
@@ -320,7 +320,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21801000" />
+    <option name="totallyTimeSpent" value="22308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -371,13 +371,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java</url>
-          <line>56</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -485,16 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.2.6/hbase-client-1.2.6.jar!/org/apache/hadoop/hbase/client/Get.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
@@ -502,10 +486,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.2.6/hbase-client-1.2.6.jar!/org/apache/hadoop/hbase/client/Result.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="239" column="18" selection-start-line="239" selection-start-column="18" selection-end-line="239" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        <state relative-caret-position="177">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -514,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="64" column="100" selection-start-line="64" selection-start-column="100" selection-end-line="64" selection-end-column="100" />
+        <state relative-caret-position="208">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
