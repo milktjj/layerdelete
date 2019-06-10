@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="layerdelete" target="1.5" />
+      <module name="layerdelete" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>

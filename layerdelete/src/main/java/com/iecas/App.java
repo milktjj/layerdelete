@@ -3,8 +3,10 @@ package com.iecas;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.iecas.Configuration.HbaseConnection;
 import com.iecas.utils.HbaseUtils;
 import com.iecas.utils.QuadTreeUtil;
+import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import com.iecas.utils.XMLP;
@@ -17,7 +19,7 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
         String url = "file:///C:\\Users\\MILK\\Desktop\\wmts.xml";
-
+        //HbaseConnection.getHBASEConn();
         if(args.length == 0) {
             System.out.println("Usage:\t--getLayers [-f xml_url]\n\t--deleteLayer layername [-f xml_url] start end");
         }else if (args[0].equals("--getLayers")) {
