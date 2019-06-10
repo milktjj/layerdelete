@@ -1,6 +1,11 @@
 package com.iecas.utils;
 
 
+import org.apache.hadoop.hbase.client.Result;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuadTreeUtil {
     public QuadTreeUtil() {
     }
@@ -36,4 +41,23 @@ public class QuadTreeUtil {
 
         return sb.toString();
     }
+
+    public static void xyz2QuadTreeCodes(int[] RC, int z, String layerName) throws Exception {
+        long[] xyz = new long[3];
+        xyz[2] = z;
+        int minR = RC[0];
+        int maxR = RC[1];
+        int minC = RC[2];
+        int maxC = RC[3];
+        System.out.println(minR + " " + maxR + " " + minC + " " + maxC);
+        for (int x = minR; x < maxR; ++x) {
+            for (int y = minC; y < maxC; ++y) {
+                xyz[0] = x;
+                xyz[1] = y;
+                Result result = HbaseUtils.getResult("hbase_tile_table", layerName + '_' +xyz2QuadTreeCode(xyz));
+                System.out.println(result.size());
+            }
+        }
+    }
+
 }
