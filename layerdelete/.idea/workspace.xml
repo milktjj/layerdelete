@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5a2f8eb-588e-457c-bee4-b47884387140" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iecas/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iecas/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +27,7 @@
         <counts>
           <entry key="class" value="11" />
           <entry key="conf" value="1" />
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
           <entry key="properties" value="1" />
           <entry key="xml" value="2" />
         </counts>
@@ -34,7 +35,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="11" />
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="2" />
@@ -42,14 +43,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1890" />
+          <entry key="java" value="1910" />
           <entry key="txt" value="14" />
           <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1890" />
+          <entry key="JAVA" value="1910" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="15" />
         </counts>
@@ -58,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="69">
+              <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,7 +75,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="172">
-              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="50" column="39" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +113,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/iecas/utils/XMLP.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/iecas/Configuration/HbaseConnection.java" />
         <option value="$PROJECT_DIR$/setting.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/iecas/Configuration/HadoopConfiguration.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/iecas/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/iecas/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java" />
       </list>
     </option>
   </component>
@@ -280,7 +293,7 @@
       <workItem from="1559638831142" duration="1689000" />
       <workItem from="1559698678745" duration="5984000" />
       <workItem from="1559801324895" duration="950000" />
-      <workItem from="1560127382238" duration="11819000" />
+      <workItem from="1560127382238" duration="12472000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1559639956355</created>
@@ -307,13 +320,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20442000" />
+    <option name="totallyTimeSpent" value="21095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -321,7 +334,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.6256078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3987034" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3987034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -455,16 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-380">
@@ -485,7 +488,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -494,8 +497,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/QuadTreeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="69">
+          <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/iecas/utils/HbaseUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

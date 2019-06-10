@@ -47,7 +47,7 @@ public class HbaseUtils {
 
     public static Result getResult(String tableName, String row) throws Exception {
         Table table = getTable(HbaseConnection.getHBASEConn(), tableName);
-        Get get = new Get(Bytes.toBytes(row));
+        Get get = new Get(Bytes.toBytes(row)).addFamily(Bytes.toBytes("cf:temp"));
         Result result = table.get(get);
         return result;
     }
