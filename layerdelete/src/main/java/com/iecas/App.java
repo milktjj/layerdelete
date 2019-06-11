@@ -39,7 +39,8 @@ public class App {
             int end = Integer.valueOf(args[args.length-1]);
             for (int z = start; z <= end; ++z) {
                 //QuadTreeUtil.xyz2QuadTreeCodes(XMLP.getLayerInfo(document, "EPSG:4326", layerName, z), z,layerName);
-                HbaseUtils.scanRows("hbase_tile_table", layerName);
+                String prefix = String.format("%2d", z);
+                HbaseUtils.scanRows("hbase_tile_table", layerName+prefix);
             }
         }
 

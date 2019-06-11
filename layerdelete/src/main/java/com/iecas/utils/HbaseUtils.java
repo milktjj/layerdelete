@@ -62,7 +62,7 @@ public class HbaseUtils {
         ResultScanner rs = table.getScanner(scan);
         try {
             for (Result r = rs.next(); r != null; r = rs.next()) {
-                System.out.println(r.getRow());
+                System.out.println(r.getRow().toString());
             }
         } finally {
             rs.close();
