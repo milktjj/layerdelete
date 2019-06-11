@@ -10,6 +10,8 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HbaseUtils {
     private static final Log log = LogFactory.getLog(HbaseUtils.class);
@@ -62,11 +64,35 @@ public class HbaseUtils {
         ResultScanner rs = table.getScanner(scan);
         try {
             for (Result r = rs.next(); r != null; r = rs.next()) {
-                System.out.println(r.getRow().toString());
+                //System.out.println(r.getRow().length);
+                System.out.println(new String(r.getRow()));
             }
         } finally {
             rs.close();
         }
 
     }
+
+    public static void deleteRows(String tableName, String prefixRow) throws Exception {
+        Table table = getTable(HbaseConnection.getHBASEConn(), tableName);
+        List<Delete> deletes = new ArrayList<Delete>();
+        Scan scan = new Scan();
+        scan.setRowPrefixFilter(prefixRow.getBytes());
+        ResultScanner rs = table.getScanner(scan);
+        try {
+            for (Result r = rs.next(); r != null; r = rs.next()) {
+                //System.out.println(r.getRow().length);
+                System.out.println(new String(r.getRow()));
+                deletes.add(new Delete(r.getRow()));
+                if(deletes.size() > 100000) {
+                    table.delete(deletes);
+                    deletes.clear();
+                }
+            }
+        } finally {
+            rs.close();
+        }
+        table.delete(deletes);
+    }
+
 }
