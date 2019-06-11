@@ -51,21 +51,25 @@ public class QuadTreeUtil {
     public static void xyz2QuadTreeCodes(int[] RC, int z, String layerName) throws Exception {
         long[] xyz = new long[3];
         xyz[2] = z;
-        int minR = RC[2];
+        /*int minR = RC[2];
         int maxR = RC[3];
         int minC = RC[0];
-        int maxC = RC[1];
+        int maxC = RC[1];*/
+        int minR = 0;
+        int maxR = 31;
+        int minC = 0;
+        int maxC = 15;
         System.out.println(minR + " " + maxR + " " + minC + " " + maxC);
         for (int x = minR; x <= maxR; ++x) {
             for (int y = minC; y <= maxC; ++y) {
                 xyz[0] = x;
                 xyz[1] = y;
-
-                Result result = HbaseUtils.getResult("hbase_tile_table", layerName + xyz2QuadTreeCode(xyz));
-                byte[] str = result.getValue(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
-                System.out.println(layerName + xyz2QuadTreeCode(xyz));
-                if(str != null)
-                    System.out.println(str.length);
+                System.out.println(x + " " + y);
+                //Result result = HbaseUtils.getResult("hbase_tile_table", layerName + xyz2QuadTreeCode(xyz));
+                //byte[] str = result.getValue(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
+                //System.out.println(layerName + xyz2QuadTreeCode(xyz));
+                //if(str != null)
+                //    System.out.println(str.length);
             }
         }
     }

@@ -53,4 +53,20 @@ public class HbaseUtils {
             System.out.print('N');
         return result;
     }
+
+    public static void scanRows(String tableName, String prefixRow) throws Exception {
+        Table table = getTable(HbaseConnection.getHBASEConn(), tableName);
+
+        Scan scan = new Scan();
+        scan.setRowPrefixFilter(prefixRow.getBytes());
+        ResultScanner rs = table.getScanner(scan);
+        try {
+            for (Result r = rs.next(); r != null; r = rs.next()) {
+                System.out.println(r.getRow());
+            }
+        } finally {
+            rs.close();
+        }
+
+    }
 }
