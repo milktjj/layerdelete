@@ -29,8 +29,8 @@ public class QuadTreeUtil {
 
         sb.append(z);
 
-        for(int i = 0; (long)i <= numOfTier; ++i) {
-            long mid = (long)Math.pow(2.0D, (double)(numOfTier - (long)i)) - 1L;
+        for (int i = 0; (long) i <= numOfTier; ++i) {
+            long mid = (long) Math.pow(2.0D, (double) (numOfTier - (long) i)) - 1L;
             if (x > mid && y > mid) {
                 sb.append(2);
             } else if (x > mid && y <= mid) {
@@ -41,8 +41,8 @@ public class QuadTreeUtil {
                 sb.append(0);
             }
 
-            x = x % (long)Math.pow(2.0D, (double)(numOfTier - (long)i));
-            y = y % (long)Math.pow(2.0D, (double)(numOfTier - (long)i));
+            x = x % (long) Math.pow(2.0D, (double) (numOfTier - (long) i));
+            y = y % (long) Math.pow(2.0D, (double) (numOfTier - (long) i));
         }
 
         return sb.toString();
@@ -61,10 +61,10 @@ public class QuadTreeUtil {
                 xyz[0] = x;
                 xyz[1] = y;
 
-                Result result = HbaseUtils.getResult("hbase_tile_table", layerName + '_' +xyz2QuadTreeCode(xyz));
-                Cell cell = result.getColumnLatestCell(Bytes.toBytes("cf"),Bytes.toBytes("temp"));
-                System.out.println((layerName +xyz2QuadTreeCode(xyz)));
-                if(cell != null){
+                Result result = HbaseUtils.getResult("hbase_tile_table", layerName + xyz2QuadTreeCode(xyz));
+                Cell cell = result.getColumnLatestCell(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
+                System.out.println((layerName + xyz2QuadTreeCode(xyz)));
+                if (cell != null) {
                     System.out.println(Bytes.toString(cell.getValueArray()).length());
                 }
             }
