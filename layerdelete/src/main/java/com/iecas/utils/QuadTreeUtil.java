@@ -61,7 +61,7 @@ public class QuadTreeUtil {
                 xyz[0] = x;
                 xyz[1] = y;
 
-                Result result = HbaseUtils.getResult("hbase_tile_table", layerName + xyz2QuadTreeCode(xyz));
+                Result result = HbaseUtils.getResult("hbase_tile_table", "DESP:china_2000_mosaic_5430430311");//layerName + xyz2QuadTreeCode(xyz));
                 byte[] str = result.getValue(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
                 System.out.println(layerName + xyz2QuadTreeCode(xyz));
                 System.out.println(str.length);
