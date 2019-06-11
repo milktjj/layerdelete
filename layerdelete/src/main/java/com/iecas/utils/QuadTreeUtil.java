@@ -62,11 +62,9 @@ public class QuadTreeUtil {
                 xyz[1] = y;
 
                 Result result = HbaseUtils.getResult("hbase_tile_table", layerName + xyz2QuadTreeCode(xyz));
-                Cell cell = result.getColumnLatestCell(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
-                System.out.println((layerName + xyz2QuadTreeCode(xyz)));
-                if (cell != null) {
-                    System.out.println(Bytes.toString(cell.getValueArray()).length());
-                }
+                byte[] str = result.getValue(Bytes.toBytes("cf"), Bytes.toBytes("temp"));
+                System.out.println(layerName + xyz2QuadTreeCode(xyz));
+                System.out.println(str.length);
             }
         }
     }

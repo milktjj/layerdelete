@@ -47,9 +47,10 @@ public class HbaseUtils {
 
     public static Result getResult(String tableName, String row) throws Exception {
         Table table = getTable(HbaseConnection.getHBASEConn(), tableName);
-        Get get = new Get(Bytes.toBytes(row));
+        Get get = new Get(row.getBytes());
         Result result = table.get(get);
-
+        if (result == null)
+            System.out.print('N');
         return result;
     }
 }
