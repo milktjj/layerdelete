@@ -6,7 +6,9 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class XMLP {
     public static Document parse(URL url) throws DocumentException {
@@ -49,18 +51,20 @@ public class XMLP {
 
     }
 
-    public static void getLayerNames(Document document) throws DocumentException {
+    public static Map getLayerNames(Document document) throws DocumentException {
 
         Element root = document.getRootElement();
-
+        Map layermap = new HashMap();
+        int i = 0;
         for (Iterator<Element> it = root.element("Contents").elementIterator(); it.hasNext(); ) {
             Element foo = it.next();
             if (foo.getName().equals("Layer")) {
                 // iterate through attributes of root
                 System.out.println(foo.element("Identifier").getStringValue());
+                layermap.put(++i,foo.element("Identifier").getStringValue());
             }
         }
 
-
+        return layermap;
     }
 }
