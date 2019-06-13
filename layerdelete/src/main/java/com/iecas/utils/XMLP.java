@@ -51,7 +51,7 @@ public class XMLP {
 
     }
 
-    public static Map getLayerNames(Document document) throws DocumentException {
+    public static Map<Integer, String> getLayerNames(Document document) throws DocumentException {
 
         Element root = document.getRootElement();
         Map layermap = new HashMap();
@@ -60,7 +60,6 @@ public class XMLP {
             Element foo = it.next();
             if (foo.getName().equals("Layer")) {
                 // iterate through attributes of root
-                System.out.println(foo.element("Identifier").getStringValue());
                 layermap.put(++i,foo.element("Identifier").getStringValue());
             }
         }
