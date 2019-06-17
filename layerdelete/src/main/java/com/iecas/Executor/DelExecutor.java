@@ -11,18 +11,21 @@ public class DelExecutor extends Thread {
     private int x;
     private int y;
     private String matrix = "EPSG:4326";
-    private String geturl = "http://geoserver:8080/geoserver/gwc/rest/wmts/%s/raster/%s/%s/%d/%d?format=image/png";
+    private String geturl = "http://geoserver:8080/geoserver/gwc/rest/wmts/%s/%s/%s/%s/%d/%d?format=image/png";
+    private String style = "raster";
 
-    public DelExecutor(String layername, int x, int y, int z) {
+    public DelExecutor(String layername, int x, int y, int z, String style) {
         this.layername = layername;
         this.x = x;
         this.y = y;
         this.z = z;
+        if(style.length()>0)
+            this.style = style;
     }
 
     public void run() {
         try {
-            URL url = new URL(String.format(geturl, layername, matrix, matrix + ':' + z, x, y));
+            URL url = new URL(String.format(geturl, layername, style,matrix, matrix + ':' + z, x, y));
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoOutput(true); // 设置该连接是可以输出的
             connection.setRequestMethod("GET"); // 设置请求方式

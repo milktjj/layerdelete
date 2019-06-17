@@ -51,6 +51,24 @@ public class XMLP {
 
     }
 
+    public static String getLayerStyle(Document document, String layerName) throws DocumentException {
+
+        Element root = document.getRootElement();
+        int[] limit = new int[4];
+        for (Iterator<Element> it = root.element("Contents").elementIterator(); it.hasNext(); ) {
+            Element foo = it.next();
+            if (foo.getName().equals("Layer")) {
+                // iterate through attributes of root
+                if (foo.element("Identifier").getStringValue().equals(layerName)) {
+                    return foo.element("Style").element("Identifier").getStringValue();
+                }
+            }
+        }
+
+        return "";
+
+    }
+
     public static Map<Integer, String> getLayerNames(Document document) throws DocumentException {
 
         Element root = document.getRootElement();

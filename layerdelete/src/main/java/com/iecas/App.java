@@ -63,6 +63,7 @@ public class App {
                 if (args.length < 4)
                     System.out.println("Please identify the start and end !");
                 else {
+                    String style = XMLP.getLayerStyle(document,layerName);
                     int start = Integer.valueOf(args[args.length - 2]);
                     int end = Integer.valueOf(args[args.length - 1]);
                     ExecutorService service = Executors.newFixedThreadPool(8);
@@ -74,7 +75,7 @@ public class App {
                         int maxC = xyz[3];
                         for (int x = minR; x < maxR; ++x) {
                             for (int y = minC; y < maxC; ++y) {
-                                service.execute(new DelExecutor(layerName, x,y, z));
+                                service.execute(new DelExecutor(layerName, x,y, z, style));
                             }
                         }
                         System.out.println("submit finish");
