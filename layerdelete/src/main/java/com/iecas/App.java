@@ -81,9 +81,9 @@ public class App {
                                 service.execute(new DelExecutor(layerName, x,y, z, style));
                             }
                         }
-                        System.out.println("submit finish");
-                        service.shutdown();
                     }
+                    System.out.println("submit finish");
+                    service.shutdown();
                 }
             } else {
                 System.out.println("ERROR!! Layer " + layerName + " not exist!!!");
