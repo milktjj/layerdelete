@@ -52,7 +52,7 @@ public class HbaseUtils {
         Get get = new Get(row.getBytes());
         Result result = table.get(get);
         if (result == null)
-            System.out.print('N');
+            log.error("Key " + row + " not EXIST!!");
         return result;
     }
 
@@ -81,10 +81,9 @@ public class HbaseUtils {
         ResultScanner rs = table.getScanner(scan);
         try {
             for (Result r = rs.next(); r != null; r = rs.next()) {
-                //System.out.println(r.getRow().length);
                 System.out.println(new String(r.getRow()));
                 deletes.add(new Delete(r.getRow()));
-                if(deletes.size() > 100000) {
+                if (deletes.size() > 100000) {
                     table.delete(deletes);
                     deletes.clear();
                 }

@@ -1,22 +1,24 @@
 package com.iecas;
 
 import java.net.URL;
-import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import com.iecas.Configuration.DLProperty;
 import com.iecas.Executor.DelExecutor;
 import com.iecas.utils.HbaseUtils;
 import org.dom4j.Document;
 import com.iecas.utils.XMLP;
 
+import static com.iecas.Configuration.DLProperty.getProperty;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        String url = "file:///C:\\Users\\MILK\\Desktop\\wmts.xml";
+        String url = String.format("http://geoserver:%s/geoserver/gwc/service/wmts?request=GetCapabilities", getProperty("geoserverPort"));
         //HbaseConnection.getHBASEConn();
         if (args.length == 0) {
-            System.out.println("Usage:\t--getLayers [-f xml_url]\n\t--deleteLayer layername start end\n\t--scanRows layername start end\"");
+            System.out.println("Usage:\t--getLayers [-f xml_url]\n\t--deleteLayer layername start end\n\t--scanRows layername start end\n\t--tileLayer layername start end");
         } else if (args[0].equals("--getLayers")) {
             if (args.length == 3) {
                 if (args[1].equals("-f"))
@@ -66,9 +68,10 @@ public class App {
                     String style = XMLP.getLayerStyle(document,layerName);
                     int start = Integer.valueOf(args[args.length - 2]);
                     int end = Integer.valueOf(args[args.length - 1]);
-                    ExecutorService service = Executors.newFixedThreadPool(8);
+                    String matrix = DLProperty.getProperty("matrix");
+                    ExecutorService service = Executors.newFixedThreadPool(Integer.parseInt(DLProperty.getProperty("maxthread")));
                     for (int z = start; z <= end; ++z) {
-                        int[] xyz = XMLP.getLayerInfo(document, "EPSG:4326", layerName, z);
+                        int[] xyz = XMLP.getLayerInfo(document, matrix, layerName, z);
                         int minR = xyz[0];
                         int maxR = xyz[1];
                         int minC = xyz[2];
@@ -85,6 +88,16 @@ public class App {
             } else {
                 System.out.println("ERROR!! Layer " + layerName + " not exist!!!");
             }
+        } else if (args[0].equals("--test")) {
+            //QuadTreeUtil.xyz2QuadTreeCodes(1);
+            /*
+            FileOutputStream file = new FileOutputStream("image_ouput.png");
+            byte[] output = HbaseUtils.getResult("hbase_tile_table",
+                    "DESP:quanguo20150132").getValue("cf".getBytes(),"temp".getBytes());
+            file.write(output);
+            file.close();
+            */
+
         }
 
     }
